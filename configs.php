@@ -13,7 +13,7 @@ $configs = [
 		# 4. Default web page preview			(Optional)	[Bool]
 		'disable_web_page_preview'	=> true,
 		# 5. Send without reply					(Optional)	[Bool]
-		'allow_sending_w/out_reply'	=> true,
+		'allow_sending_without_reply'	=> true,
 		# 6. Send without notification sound	(Optional)	[Bool]
 		'disable_notification'		=> false,
 		# 7. Protect contents					(Optional)	[Bool]
