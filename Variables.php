@@ -12,7 +12,7 @@ class Variables
 		$this->configs = $configs;
 		$this->update = $update;
 		if (!isset($this->update['update_id'])) {
-			return $this->response = ['ok' => 0, 'error_code' => 400, 'description' => 'Bad Request: update_id not found'];
+			$this->response = ['ok' => 0, 'error_code' => 400, 'description' => 'Bad Request: update_id not found'];
 		} elseif ($this->update['message']) {
 			$this->varMessage($this->update['message']);
 		} elseif ($this->update['edited_message']) {
@@ -42,9 +42,9 @@ class Variables
 		} elseif ($this->update['chat_join_request']) {
 			$this->varChatJoinRequest($this->update['chat_join_request']);
 		} else {
-			return $this->response = ['ok' => 0, 'error_code' => 404, 'description' => 'Not Found: unknown update type'];
+			$this->response = ['ok' => 0, 'error_code' => 404, 'description' => 'Not Found: unknown update type'];
 		}
-		return $this->response = ['ok' => 1];
+		$this->response = ['ok' => 1]; 
 	}
 
 	public function isAdmin($id = 'def') {
