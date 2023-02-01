@@ -612,7 +612,7 @@ class Variables
 		$this->varPhoto($Game['photo']);
 		$this->text = $Game['text'];
 		$this->entities = $Game['text_entities'];
-		$this->animation = varAnimation($Game['animation']);
+		$this->animation = $this->varAnimation($Game['animation']);
 	}
 
 	# Get variables
